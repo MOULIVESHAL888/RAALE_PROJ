@@ -1,0 +1,46 @@
+[
+  {
+    "id": "normal",
+    "name": "Scenario 1 — Normal Workload",
+    "description": "Stable clinical traffic with moderate CPU and memory utilization, low latency, and high availability.",
+    "traffic_multiplier": 1.0,
+    "cpu_multiplier": 1.0,
+    "memory_multiplier": 1.0,
+    "latency_adder_ms": 0,
+    "availability_impact": 0.0,
+    "expected_result": "Rightsizing should usually be safe as resources operate within normal headroom."
+  },
+  {
+    "id": "peak",
+    "name": "Scenario 2 — Peak Hospital Activity",
+    "description": "High request volume during peak hospital hours (shift handovers, emergency surges, outpatient peak), high CPU/memory usage, and elevated latency.",
+    "traffic_multiplier": 1.65,
+    "cpu_multiplier": 1.45,
+    "memory_multiplier": 1.30,
+    "latency_adder_ms": 45,
+    "availability_impact": -0.05,
+    "expected_result": "Some rightsizing recommendations must be rejected or marked for review because performance risk is too high during peak demand."
+  },
+  {
+    "id": "bursty",
+    "name": "Scenario 3 — Bursty / Unpredictable Workload",
+    "description": "Unpredictable traffic spikes, variable request volume, high P95/P99 CPU, and periodic latency spikes.",
+    "traffic_multiplier": 1.85,
+    "cpu_multiplier": 1.60,
+    "memory_multiplier": 1.40,
+    "latency_adder_ms": 75,
+    "availability_impact": -0.10,
+    "expected_result": "Rightsizing may look cost-effective under average usage but becomes unsafe when peak/burst demand is considered."
+  },
+  {
+    "id": "backup",
+    "name": "Scenario 4 — Over-Provisioned Backup Workload",
+    "description": "Scheduled off-peak data replication, low CPU/memory utilization, predictable traffic, and minimal latency sensitivity.",
+    "traffic_multiplier": 0.70,
+    "cpu_multiplier": 0.60,
+    "memory_multiplier": 0.55,
+    "latency_adder_ms": -10,
+    "availability_impact": 0.01,
+    "expected_result": "Aggressive rightsizing produces significant cost savings with minimal performance risk."
+  }
+]

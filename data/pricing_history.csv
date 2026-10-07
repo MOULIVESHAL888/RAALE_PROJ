@@ -1,0 +1,17 @@
+instance_type,effective_date,hourly_price,currency,cloud_provider
+t3.micro,2026-01-01,0.0104,USD,AWS
+t3.small,2026-01-01,0.0208,USD,AWS
+t3.medium,2026-01-01,0.0416,USD,AWS
+t3.large,2026-01-01,0.0832,USD,AWS
+t3.xlarge,2026-01-01,0.1664,USD,AWS
+m5.large,2026-01-01,0.0960,USD,AWS
+m5.xlarge,2026-01-01,0.1920,USD,AWS
+m5.2xlarge,2026-01-01,0.3840,USD,AWS
+m5.4xlarge,2026-01-01,0.7680,USD,AWS
+r5.large,2026-01-01,0.1260,USD,AWS
+r5.xlarge,2026-01-01,0.2520,USD,AWS
+r5.2xlarge,2026-01-01,0.5040,USD,AWS
+r5.4xlarge,2026-01-01,1.0080,USD,AWS
+c5.large,2026-01-01,0.0850,USD,AWS
+c5.xlarge,2026-01-01,0.1700,USD,AWS
+c5.2xlarge,2026-01-01,0.3400,USD,AWS
